@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #22232e;
+}
+.toggle-btn {
+  position: relative;
+  height: 50px;
+  width: 100px;
+  background-color: #42455a;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.toggle-btn.active {
+  background: #e0ffff;
+}
+.toggle-btn .icon {
+  position: absolute;
+  top: 50%;
+  left: -1px;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 60px;
+  font-size: 30px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #42455a;
+  border: 1px solid #999;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+.toggle-btn.active .icon {
+  left: calc(100% - 59px);
+  color: #e0ffff;
+  border: 1px solid #e0ffff;
+}
+.toggle-btn.active .icon i {
+  animation: spin 0.5s;
+}
+@keyframes spin {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="toggle-btn">
+    <div class="icon">
+      <i class="fa-solid fa-moon"></i>
+    </div>
+  </div>
+</body>
+<script>
+    const toggleBtn = document.querySelector(".toggle-btn"),
+    lockIcon = document.querySelector(".icon i");
+
+    toggleBtn.addEventListener("click", () => {
+      toggleBtn.classList.toggle("active");
+
+      if(toggleBtn.classList.contains("active")){
+      lockIcon.classList.replace("fa-moon", "fa-sun");
+      }else
+     lockIcon.classList.replace("fa-sun", "fa-moon");
+    })
+</script>
+</html>
