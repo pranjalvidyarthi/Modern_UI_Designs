@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Buttons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Reset */
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        
+        body {
+            line-height: 1;
+        }
+        
+        ol, ul {
+            list-style: none;
+        }
+        
+        blockquote, q {
+            quotes: none;
+        }
+        
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+        
+        /* Social Buttons */
+        .social-btns {
+            height: 90px;
+            margin: auto;
+            font-size: 0;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        .social-btns .btn {
+            transition: all .35s;
+            transition-timing-function: cubic-bezier(0.310, -0.105, 0.430, 1.590);
+            display: inline-block;
+            background-color: #fff;
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+            margin: 0 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-radius: 28%;
+            box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+            opacity: .99;
+        }
+        
+        .social-btns .btn:before {
+            transition: all .35s;
+            transition-timing-function: cubic-bezier(0.310, -0.105, 0.430, 1.590);
+            content: '';
+            width: 120%;
+            height: 120%;
+            position: absolute;
+            transform: rotate(45deg);
+            top: 90%;
+            left: -110%;
+        }
+        
+        .social-btns .btn .fa {
+            transition: all .35s;
+            transition-timing-function: cubic-bezier(0.310, -0.105, 0.430, 1.590);
+            font-size: 38px;
+            vertical-align: middle;
+            transform: scale(0.8);
+        }
+        
+        /* Facebook */
+        .social-btns .btn.facebook:before {
+            background-color: #3B5998;
+        }
+        
+        .social-btns .btn.facebook .fa {
+            color: #3B5998;
+        }
+        
+        /* Twitter */
+        .social-btns .btn.twitter:before {
+            background-color: #3CF;
+        }
+        
+        .social-btns .btn.twitter .fa {
+            color: #3CF;
+        }
+        
+        /* Google */
+        .social-btns .btn.google:before {
+            background-color: #DC4A38;
+        }
+        
+        .social-btns .btn.google .fa {
+            color: #DC4A38;
+        }
+        
+        /* Dribbble */
+        .social-btns .btn.dribbble:before {
+            background-color: #F26798;
+        }
+        
+        .social-btns .btn.dribbble .fa {
+            color: #F26798;
+        }
+        
+        /* Skype */
+        .social-btns .btn.skype:before {
+            background-color: #00AFF0;
+        }
+        
+        .social-btns .btn.skype .fa {
+            color: #00AFF0;
+        }
+        
+        /* Hover/Focus States */
+        .social-btns .btn:focus,
+        .social-btns .btn:hover {
+            text-decoration: none;
+        }
+        
+        .social-btns .btn:focus:before,
+        .social-btns .btn:hover:before {
+            top: -10%;
+            left: -10%;
+        }
+        
+        .social-btns .btn:focus .fa,
+        .social-btns .btn:hover .fa {
+            color: #fff;
+            transform: scale(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="social-btns">
+        <a href="#" class="btn facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="btn twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="btn google"><i class="fa fa-google"></i></a>
+        <a href="#" class="btn dribbble"><i class="fa fa-dribbble"></i></a>
+        <a href="#" class="btn skype"><i class="fa fa-skype"></i></a>
+    </div>
+</body>
+</html>
